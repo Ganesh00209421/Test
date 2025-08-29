@@ -1,11 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <title>DOM Attribute Manipulation Example</title>
 </head>
 <body>
-<h1>i need something</h1>
+  <div id="myElement">Hello, World!</div>
+
+  <script>
+    // setAttribute()
+    var element = document.getElementById("myElement");
+    element.setAttribute("class", "newClass");
+
+    // getAttribute()
+    var className = element.getAttribute("class");
+    console.log(className); // "newClass"
+
+    // removeAttribute()
+    element.removeAttribute("class");
+
+    // Check if attribute is removed
+    className = element.getAttribute("class");
+    console.log(className); // null
+  </script>
 </body>
 </html>
